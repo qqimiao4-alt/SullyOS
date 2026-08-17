@@ -1053,7 +1053,8 @@ ${userProfile.name} 给你反馈时，别当成约束，当成信任——ta 在
 
 每一句话，都应该像是不经意间，从 ${char.name} 心里自然冒出来的。`;
 
-        const perfTotal = Math.round(performance.now() - perfT0);
+      recencyTail = '';
+  const perfTotal = Math.round(performance.now() - perfT0);
         const timingStr = Object.entries(timings)
             .sort((a, b) => b[1] - a[1])
             .map(([k, v]) => `${k}=${v}ms`)
