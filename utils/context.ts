@@ -142,14 +142,14 @@ export const ContextBuilder = {
         ));
 
         let context = formatWorldbookSection(worldbookSections.beforeCharacter, '世界书 · 角色设定前');
-        context += `${groupOptions?.headerOverride ?? '[System: Roleplay Configuration]'}\n\n`;
+        context += `${groupOptions?.headerOverride ?? ''}\n\n`;
 
         // 1. 核心身份 (Identity)
         context += `### 你的身份 (Character)\n`;
         context += `- 名字: ${char.name}\n`;
         // Change: Explicitly label description as User Note to avoid literal interpretation
         context += `- 用户备注/爱称 (User Note/Nickname): ${char.description || '无'}\n`;
-        context += `  (注意: 这个备注是用户对你的称呼或印象，可能包含比喻。如果备注内容（如“快乐小狗”）与你的核心设定冲突，请以核心设定为准，不要真的扮演成动物，除非核心设定里写了你是动物。)\n`;
+      
         context += `- 核心性格/指令:\n${char.systemPrompt || ''}\n\n`;
 
         // 1a. 真实时间感知 (Time Awareness) — 跟随 timeAwarenessEnabled 设置，默认开启。
